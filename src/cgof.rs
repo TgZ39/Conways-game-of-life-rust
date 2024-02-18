@@ -1,4 +1,4 @@
-use derive_builder::Builder;
+
 use rand::distributions::{Distribution, Standard};
 use rand::Rng;
 use crate::cgof::Cell::{Alive, Dead};
@@ -97,7 +97,7 @@ impl Board {
                 match (self.get_cell(x, y).unwrap_or(Dead), self.count_neighbours(x, y)) {
                     (Alive, 0..=1) => Dead,
                     (Alive, 2..=3) => Alive,
-                    (Alive, 3..=8) => Dead,
+                    (Alive, 4..=8) => Dead,
                     (Dead, 3) => Alive,
                     (_, _) => Dead,
                     }
