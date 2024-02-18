@@ -19,7 +19,7 @@ impl Board {
         let mut rng = rand::thread_rng();
 
         for _ in 1..=(length * length) {
-            cells.push(rng.gen())
+            cells.push(rng.gen());
         }
 
         Self { cells, length }
